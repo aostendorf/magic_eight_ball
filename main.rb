@@ -39,7 +39,11 @@ end
 
 
 
-
+loop do
+  case menu
+  when 3
+    questions
+end
 
 
 
