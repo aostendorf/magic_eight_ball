@@ -12,6 +12,17 @@ class Roll
       "It is certain".colorize(:green),
       "It is decidely so".colorize(:green),
       "You may rely on it".colorize(:green),
+      "Reply hazy, try again".colorize(:yellow),
+      "Ask again later".colorize(:yellow),
+      "Better not tell you now".colorize(:yellow),
+      "Cannot predict now".colorize(:yellow),
+      "Concentrate and ask again".colorize(:yellow),
+      "Don't count on it".colorize(:red),
+      "My reply is no".colorize(:red),
+      "My sources say no".colorize(:red),
+      "Outlook not so good".colorize(:red),
+      "Very doubtful".colorize(:red),
+      "Hell nah".colorize(:red),
     ].sample
 
     puts @roll.sample
