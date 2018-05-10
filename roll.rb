@@ -1,7 +1,11 @@
 class Roll
-  attr_accessor :roll
+  attr_accessor :roll :roll_array :add_answer
 
   def initialize(roll)
+    @roll = roll
+  end
+
+  def roll_array
     @roll = [
       "Don't count on it".colorize(:green),
       "Hell Yeah!".colorize(:green),
@@ -23,8 +27,13 @@ class Roll
       "Outlook not so good".colorize(:red),
       "Very doubtful".colorize(:red),
       "Hell nah".colorize(:red),
-    ].sample
-
+    ]
     puts @roll.sample
+  end
+
+  def add_answer(input)
+    @input = input
+    @roll << @input
+    puts "Your answer: #{@input}"
   end
 end

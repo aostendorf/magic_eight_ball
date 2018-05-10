@@ -10,7 +10,7 @@
 # - ability to reset answers back to the original bank (hint: think arr.clone)
 # - via easter egg question ("reset_answers")
 # - ability to have eight ball print all answers - Robin
-# - via easter egg question ("print_answers") - 
+# - via easter egg question ("print_answers") -
 # Bonus Objectives:
 
 # -ability to use script arguments when the magic eight ball is started to do bonus functionality above
@@ -20,6 +20,7 @@
 require_relative 'roll'
 require 'pry'
 require 'colorize'
+
 
 # BIANCA WORKING ON MENU
 def menu
@@ -31,18 +32,20 @@ def menu
   roll_ball = gets.strip
 end
 
-#AMBER: THIS IS WHERE THE USER INPUTS QUESTION
+
 def questions
 
 end
 
-# MICHAEL; THIS IS WHERE THE ANSWERS WILL OUTPUT
+
 def answers
-  puts ""
+  puts "Hit the Enter button to see your future!".colorize(:red)
+  @answer = Roll.new
 end
 answers.sample
 end
 
+binding.pry
 #
 
 
