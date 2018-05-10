@@ -16,3 +16,12 @@
 # -ability to use script arguments when the magic eight ball is started to do bonus functionality above
 # - for example ruby magic_eight.RB add_answers
 # this would start your script but instead of running the regular way you would be prompted to add answers first
+
+def menu
+  puts "Welcome to the magin eight ball!"
+  puts "Think really hard about a question"
+  puts "hit ENTER to roll the ball"
+  roll_ball = gets.strip
+end
+
+menu
