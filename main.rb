@@ -21,27 +21,35 @@ require_relative 'roll'
 require 'pry'
 require 'colorize'
 
+# BIANCA WORKING ON MENU
 def menu
-  puts "1. Welcome to the magin eight ball!"
-  puts "2. Think really hard about a question"
-  puts "3. Hit ENTER to roll the ball"
+  puts "1. Welcome to the magic eight ball!"
+  puts "2. Roll the magic ball to see your future"
+  puts "3. Don't like your answer? Choose your own"
+  puts "4. Would you like a list of your answers?"
+  puts "3. Quit"
   roll_ball = gets.strip
 end
 
+#AMBER: THIS IS WHERE THE USER INPUTS QUESTION
 def questions
+
 end
 
+# MICHAEL; THIS IS WHERE THE ANSWERS WILL OUTPUT
+def answers
+  puts ""
+end
 answers.sample
 end
 
-
-
-
+#
 
 
 loop do
   case menu
-  when 3
+  when 2
+
     questions
 end
 
