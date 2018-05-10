@@ -17,6 +17,9 @@
 # - for example ruby magic_eight.RB add_answers
 # this would start your script but instead of running the regular way you would be prompted to add answers first
 
+require_relative 'roll'
+require 'pry'
+
 def menu
   puts "Welcome to the magin eight ball!"
   puts "Think really hard about a question"
