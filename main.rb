@@ -1,6 +1,3 @@
-require 'colorize'
-require_relative 'git'
-
 # Basic Objectives:
 
 # - User inputs question
@@ -22,6 +19,7 @@ require_relative 'git'
 
 require_relative 'roll'
 require 'pry'
+require 'colorize'
 
 def menu
   puts "1. Welcome to the magin eight ball!"
@@ -31,8 +29,7 @@ def menu
 end
 
 def questions
-  answers = ["Don't count on it", "Hell Yeah!", "Signs point to yes",
-  "Not lookin' good", "My sources say no", "Most likely" ]
+end
 
 answers.sample
 end
