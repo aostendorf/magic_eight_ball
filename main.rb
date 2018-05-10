@@ -1,3 +1,6 @@
+require 'colorize'
+require_relative 'git'
+
 # Basic Objectives:
 
 # - User inputs question
@@ -18,10 +21,48 @@
 # this would start your script but instead of running the regular way you would be prompted to add answers first
 
 def menu
-  puts "Welcome to the magin eight ball!"
-  puts "Think really hard about a question"
-  puts "hit ENTER to roll the ball"
+  puts "1. Welcome to the magin eight ball!"
+  puts "2. Think really hard about a question"
+  puts "3. Hit ENTER to roll the ball"
   roll_ball = gets.strip
 end
+
+def questions
+  answers = ["Don't count on it", "Hell Yeah!", "Signs point to yes",
+  "Not lookin' good", "My sources say no", "Most likely" ]
+
+answers.sample
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 menu
