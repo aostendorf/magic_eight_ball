@@ -1,45 +1,76 @@
-
-require_relative 'roll'
 require 'colorize'
 require 'pry'
 
-x = Roll.new
-x.roll_array
-binding.pry
+class Roll
+  # attr_accessor :roll, :roll_array, :add_answer
 
-# BIANCA WORKING ON MENU
+  def initialize
+    roll_array
+    instructions
+  end
 
-
-binding.pry
-#
-
-
-
-
-instructions
-
-
-
-
+  def instructions
+    puts "1. Welcome to the magic eight ball!"
+    puts "2. Roll the magic ball to see your future"
+    puts "3. Don't like your answer? Choose your own"
+    puts "4. Would you like a list of your answers?"
+    puts "3. Quit"
+    menu
+  end
 
 
+  def questions
+  end
 
 
-# Basic Objectives:
+  def answers
+    puts "Hit the Enter button to see your future!".colorize(:red)
+    Roll.new = magic_answer
+    magic_answer = @answers.roll_array
+    puts "Your answer #{@input} "
+  end
 
-# - User inputs question - Amber
-# - Computer outputs random answer - Michael
-# - User inputs "QUIT" - Bianca
-# - Computer outputs a goodbye message and exits - Bianca
-# - ability to add more answers: - Bianca - maybe :)
-# - via easter egg question ("add_answers") - Come back
-# - do not let them add the same answer if the eight ball already has that answer - Michael
-# - ability to reset answers back to the original bank (hint: think arr.clone)
-# - via easter egg question ("reset_answers")
-# - ability to have eight ball print all answers - Robin
-# - via easter egg question ("print_answers") -
-# Bonus Objectives:
+  def roll_array
+    @roll = [
+      "Don't count on it".colorize(:green),
+      "Hell Yeah!".colorize(:green),
+      "Signs point to yes".colorize(:green),
+      "Not lookin' good".colorize(:green),
+      "My sources say no".colorize(:green),
+      "Most likely".colorize(:green),
+      "It is certain".colorize(:green),
+      "It is decidely so".colorize(:green),
+      "You may rely on it".colorize(:green),
+      "Reply hazy, try again".colorize(:yellow),
+      "Ask again later".colorize(:yellow),
+      "Better not tell you now".colorize(:yellow),
+      "Cannot predict now".colorize(:yellow),
+      "Concentrate and ask again".colorize(:yellow),
+      "Don't count on it".colorize(:red),
+      "My reply is no".colorize(:red),
+      "My sources say no".colorize(:red),
+      "Outlook not so good".colorize(:red),
+      "Very doubtful".colorize(:red),
+      "Hell nah".colorize(:red),
+    ]
+    # puts @roll.sample
+  end
 
-# -ability to use script arguments when the magic eight ball is started to do bonus functionality above
-# - for example ruby magic_eight.RB add_answers
-# this would start your script but instead of running the regular way you would be prompted to add answers first
+  def menu
+    selection = gets.strip.to_i
+    case selection
+    when 2
+      answers
+    else
+      puts "Invalid entry"
+    end
+  end
+
+  def add_answer(input)
+    @input = input
+    @roll << @input
+    puts "Your answer: #{@input}"
+  end
+end
+
+Roll.new
