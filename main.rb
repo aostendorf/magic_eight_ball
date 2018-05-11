@@ -1,3 +1,30 @@
+
+require_relative 'roll'
+require 'colorize'
+require 'pry'
+
+x = Roll.new
+x.roll_array
+binding.pry
+
+# BIANCA WORKING ON MENU
+
+
+binding.pry
+#
+
+
+
+
+instructions
+
+
+
+
+
+
+
+
 # Basic Objectives:
 
 # - User inputs question - Amber
@@ -16,68 +43,3 @@
 # -ability to use script arguments when the magic eight ball is started to do bonus functionality above
 # - for example ruby magic_eight.RB add_answers
 # this would start your script but instead of running the regular way you would be prompted to add answers first
-
-require_relative 'roll'
-require 'pry'
-require 'colorize'
-
-
-# BIANCA WORKING ON MENU
-def menu
-  puts "1. Welcome to the magic eight ball!"
-  puts "2. Roll the magic ball to see your future"
-  puts "3. Don't like your answer? Choose your own"
-  puts "4. Would you like a list of your answers?"
-  puts "3. Quit"
-  roll_ball = gets.strip
-end
-
-
-def questions
-
-end
-
-
-def answers
-  puts "Hit the Enter button to see your future!".colorize(:red)
-  @answer = Roll.new
-end
-answers.sample
-end
-
-binding.pry
-#
-
-
-loop do
-  case menu
-  when 2
-
-    questions
-end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-menu
